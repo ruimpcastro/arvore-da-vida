@@ -70,9 +70,6 @@ const Navbar = () => {
                 }}
               />
             </Link>
-            <Typography variant="body1">
-              Sociedade Unipessoal Lda
-            </Typography>
           </Box>
           <Box>
             <ul
@@ -87,7 +84,7 @@ const Navbar = () => {
                 return (
                   <Typography key={nav.id} variant="button">
                     <NavigationItem to={nav.to} exact={nav.exact}>
-                      <Button variant="link">
+                      <Button variant="link" sx={{ padding: "6px 16px !important" }}>
                         {nav.icon} {nav.label}
                       </Button>
                     </NavigationItem>
