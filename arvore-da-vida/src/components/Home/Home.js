@@ -4,9 +4,8 @@ import Slideshow from "./Slideshow/Slideshow";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ overflow: "hidden", height: "100vh" }}>
       <Navbar />
-      <h1>Home</h1>
       <Slideshow />
     </div>
   );

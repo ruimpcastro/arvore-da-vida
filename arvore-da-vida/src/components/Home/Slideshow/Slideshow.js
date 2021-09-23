@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import SlideshowItem from "./SlideshowItem/SlideshowItem";
 
-import Container from "@mui/material/Container";
+import { Box } from "@mui/material";
 
 // IMAGE IMPORTS
 import produto1 from "../../../assets/products/produto1.jpg";
@@ -29,13 +29,15 @@ const Slideshow = () => {
   ];
 
   return (
-    <Container
+    <Box
       sx={{
         display: "flex",
         flexDirection: "column",
+        height: "90vh",
+        
       }}
     >
-      <Carousel interval="3000">
+      <Carousel interval="3000" indicators="false">
         {gallery.map((image, i) => (
           <SlideshowItem
             image={image.image}
@@ -45,7 +47,7 @@ const Slideshow = () => {
           />
         ))}
       </Carousel>
-    </Container>
+    </Box>
   );
 };
 

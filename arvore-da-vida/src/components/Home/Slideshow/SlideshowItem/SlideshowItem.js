@@ -6,12 +6,23 @@ const SlideshowItem = (props) => {
   return (
     <Paper
       elevation={0}
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        background: props.image,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100",
+      }}
     >
       <img
         src={props.image}
         alt={props.name}
-        style={{ maxHeight: "500px", display: "flex", alignItems: "center" }}
+        style={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+        }}
       />
       <Typography variant="body1">{props.description}</Typography>
     </Paper>
