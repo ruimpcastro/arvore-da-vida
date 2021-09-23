@@ -2,7 +2,6 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import SlideshowItem from "./SlideshowItem/SlideshowItem";
 
-// MATERIAL IMPORTS
 import Container from "@mui/material/Container";
 
 // IMAGE IMPORTS
@@ -30,12 +29,10 @@ const Slideshow = () => {
   ];
 
   return (
-    <div
-      style={{
+    <Container
+      sx={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        width: "100%",
       }}
     >
       <Carousel interval="3000" autoPlay={false}>
@@ -48,7 +45,7 @@ const Slideshow = () => {
           />
         ))}
       </Carousel>
-    </div>
+    </Container>
   );
 };
 

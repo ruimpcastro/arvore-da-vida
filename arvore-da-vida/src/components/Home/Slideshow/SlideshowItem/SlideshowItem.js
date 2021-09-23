@@ -5,14 +5,14 @@ import Typography from "@mui/material/Typography";
 const SlideshowItem = (props) => {
   return (
     <Paper
-      elevation={6}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
+      elevation={0}
+      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <img src={props.image} alt={props.name} style={{ maxHeight: "500px" }} />
+      <img
+        src={props.image}
+        alt={props.name}
+        style={{ maxHeight: "500px", display: "flex", alignItems: "center" }}
+      />
       <Typography variant="body1">{props.description}</Typography>
     </Paper>
   );
