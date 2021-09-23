@@ -35,7 +35,7 @@ const Slideshow = () => {
         flexDirection: "column",
       }}
     >
-      <Carousel interval="3000" autoPlay={false}>
+      <Carousel interval="3000">
         {gallery.map((image, i) => (
           <SlideshowItem
             image={image.image}

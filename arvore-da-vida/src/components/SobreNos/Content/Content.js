@@ -1,11 +1,4 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Container,
-  Typography,
-} from "@material-ui/core";
+import { Box, Container, Typography } from "@material-ui/core";
 import React from "react";
 
 const Content = (props) => {
@@ -25,7 +18,11 @@ const Content = (props) => {
             src={props.image}
             alt={props.alt}
             width="50%"
-            style={{ borderRadius: "2%" }}
+            style={{
+              borderRadius: "2%",
+              boxShadow:
+                "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+            }}
           />
           <Box
             ml={5}
@@ -59,7 +56,11 @@ const Content = (props) => {
               src={props.image}
               alt={props.alt}
               width="50%"
-              style={{ borderRadius: "2%" }}
+              style={{
+                borderRadius: "2%",
+                boxShadow:
+                  "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+              }}
             />
             <Box
               mr={5}
