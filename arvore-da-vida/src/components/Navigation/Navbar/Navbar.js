@@ -3,14 +3,12 @@ import NavigationItem from "../NavigationItem/NavigationItem";
 import Logo from "../../../assets/Logo.jpg";
 
 // MATERIAL IMPORTS
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import { AppBar, Box, Toolbar, Button, Typography } from "@mui/material";
+
 import InfoSharpIcon from "@mui/icons-material/InfoSharp";
 import MedicalServicesSharpIcon from "@mui/icons-material/MedicalServicesSharp";
 import ImportContactsSharpIcon from "@mui/icons-material/ImportContactsSharp";
-import Button from "@mui/material/Button";
+
 import { theme } from "../../../MaterialColorTheme/MaterialColorTheme";
 
 // REACT-ROUTER-DOM IMPORTS
@@ -84,7 +82,13 @@ const Navbar = () => {
                 return (
                   <Typography key={nav.id} variant="button">
                     <NavigationItem to={nav.to} exact={nav.exact}>
-                      <Button variant="link" sx={{ padding: "6px 16px !important" }}>
+                      <Button
+                        variant="link"
+                        style={{
+                          padding: "6px 16px !important",
+                          color: theme.palette.secondary.main,
+                        }}
+                      >
                         {nav.icon} {nav.label}
                       </Button>
                     </NavigationItem>

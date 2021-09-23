@@ -6,6 +6,7 @@ import servico2 from "../../assets/services/servico2.jpg";
 
 import { Container } from "@mui/material";
 import Content from "./Content/Content";
+import { Box } from "@material-ui/core";
 
 const SobreNos = () => {
   const content = [
@@ -45,21 +46,22 @@ const SobreNos = () => {
   return (
     <div>
       <Navbar />
-      <h1>Sobre nós</h1>
-      <Container>
-        {content.map((item, index) => {
-          return (
-            <Content
-              key={index}
-              layoutStyle={oddNumber(index)}
-              image={item.image}
-              alt={item.alt}
-              title={item.title}
-              body={item.body}
-            />
-          );
-        })}
-      </Container>
+      <Box mt={5}>
+        <Container>
+          {content.map((item, index) => {
+            return (
+              <Content
+                key={index}
+                layoutStyle={oddNumber(index)}
+                image={item.image}
+                alt={item.alt}
+                title={item.title}
+                body={item.body}
+              />
+            );
+          })}
+        </Container>
+      </Box>
     </div>
   );
 };
