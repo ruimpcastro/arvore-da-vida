@@ -54,7 +54,7 @@ const ContactosInfo = () => {
                 href={`tel:+351${info.telefone}`}
                 style={{ textDecoration: "none" }}
               >
-                <Button variant="Link">
+                <Button variant="text">
                   <Typography
                     variant="body1"
                     style={{ display: "flex", margin: "10px 5px 10px 5px" }}
@@ -74,7 +74,7 @@ const ContactosInfo = () => {
                 href={`tel:+351${info.telemovel}`}
                 style={{ textDecoration: "none" }}
               >
-                <Button variant="Link">
+                <Button variant="text">
                   <Typography
                     variant="body1"
                     style={{ display: "flex", margin: "10px 0" }}
@@ -90,7 +90,7 @@ const ContactosInfo = () => {
                 href={`mailto:${info.mail}`}
                 style={{ textDecoration: "none" }}
               >
-                <Button variant="Link" style={{ textTransform: "none" }}>
+                <Button variant="text" style={{ textTransform: "none" }}>
                   <Typography
                     variant="body1"
                     style={{ display: "flex", margin: "10px 0" }}
