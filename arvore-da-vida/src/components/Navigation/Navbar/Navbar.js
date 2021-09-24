@@ -89,10 +89,10 @@ const Navbar = () => {
                     <NavigationItem to={nav.to} exact={nav.exact}>
                       <Button
                         variant="link"
-                        style={{
+                        sx={{
                           padding: "6px 16px !important",
-                          color: theme.palette.secondary.main,
                         }}
+                        style={{ color: theme.palette.secondary.main }}
                       >
                         {nav.icon} {nav.label}
                       </Button>

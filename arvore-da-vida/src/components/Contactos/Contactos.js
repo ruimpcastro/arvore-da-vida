@@ -5,8 +5,6 @@ import ContactosForm from "./ContactosForm/ContactosForm";
 import ContactosInfo from "./ContactosInfo/ContactosInfo";
 import ContactosMap from "./ContactosMap/ContactosMap";
 
-import { theme } from "../../MaterialColorTheme/MaterialColorTheme";
-
 const Contactos = () => {
   return (
     <div>
