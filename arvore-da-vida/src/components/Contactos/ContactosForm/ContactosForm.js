@@ -7,7 +7,6 @@ const ContactosForm = () => {
   return (
     <Box
       p={5}
-      mt={3}
       style={{
         display: "flex",
         flexDirection: "column",
