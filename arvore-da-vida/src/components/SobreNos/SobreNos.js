@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../Navigation/Navbar/Navbar";
 
 import servico1 from "../../assets/services/servico1.jpg";

@@ -24,7 +24,7 @@ const ContactosInfo = () => {
         {info.empresa && (
           <Typography
             variant="h5"
-            gutterBottom="true"
+            gutterBottom
             style={{ fontWeight: "500" }}
           >
             {info.empresa}

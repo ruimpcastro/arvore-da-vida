@@ -2,13 +2,11 @@ import React from "react";
 
 import { Card } from "@mui/material";
 import {
-  Box,
   Button,
   CardActions,
   CardContent,
   CardMedia,
   Typography,
-  CardActionArea,
 } from "@material-ui/core";
 import CallSharpIcon from "@mui/icons-material/CallSharp";
 
