@@ -39,7 +39,12 @@ const Navbar = () => {
     },
   ];
   return (
-    <Box sx={{ flexDirection: "row", width: "100%" }}>
+    <Box
+      sx={{
+        flexDirection: "row",
+        width: "100%",
+      }}
+    >
       <AppBar
         position="static"
         sx={{
