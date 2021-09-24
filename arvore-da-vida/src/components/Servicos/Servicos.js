@@ -5,6 +5,9 @@ import Servico from "./Servico/Servico";
 import { Container, Grid } from "@material-ui/core";
 
 import servico1 from "../../assets/services/servico1.jpg";
+import servico2 from "../../assets/services/servico2.jpg";
+import servico3 from "../../assets/services/servico3.png";
+import servico4 from "../../assets/services/servico4.png";
 
 const Servicos = (strVal) => {
   const servicos = [
@@ -18,7 +21,7 @@ const Servicos = (strVal) => {
     },
     {
       id: 1,
-      image: servico1,
+      image: servico2,
       title: "Naturopatia",
       contacto: "912345678",
       description: "O Dr. Leonardo Pacheco",
@@ -32,7 +35,7 @@ const Servicos = (strVal) => {
     },
     {
       id: 4,
-      image: servico1,
+      image: servico2,
       title: "Naturopatia",
       contacto: "912345678",
       description:
