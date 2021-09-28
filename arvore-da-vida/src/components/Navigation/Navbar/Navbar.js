@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Navbar.module.css";
 import NavigationItem from "../NavigationItem/NavigationItem";
 import Logo from "../../../assets/Logo.jpg";
 
@@ -20,31 +21,26 @@ const Navbar = () => {
       id: "1",
       to: "/sobrenos",
       exact: true,
-      icon: <InfoSharpIcon sx={{ marginRight: "5px" }} />,
+      icon: <InfoSharpIcon className={styles.icons} />,
       label: "Sobre nós",
     },
     {
       id: "2",
       to: "/servicos",
       exact: true,
-      icon: <MedicalServicesSharpIcon sx={{ marginRight: "5px" }} />,
+      icon: <MedicalServicesSharpIcon className={styles.icons} />,
       label: " Serviços",
     },
     {
       id: "3",
       to: "/contactos",
       exact: true,
-      icon: <ImportContactsSharpIcon sx={{ marginRight: "5px" }} />,
+      icon: <ImportContactsSharpIcon className={styles.icons} />,
       label: " Contactos",
     },
   ];
   return (
-    <Box
-      sx={{
-        flexDirection: "row",
-        width: "100%",
-      }}
-    >
+    <Box className={styles.box}>
       <AppBar
         position="static"
         sx={{
@@ -52,46 +48,20 @@ const Navbar = () => {
           flexDirection: "row",
         }}
       >
-        <Toolbar
-          sx={{
-            width: "100%",
-            justifyContent: "space-between",
-            flexDirection: "row",
-            padding: "0 !important",
-            margin: "0.5% 2% !important",
-          }}
-        >
+        <Toolbar className={styles.toolbar}>
           <Box>
             <Link to="/">
-              <img
-                src={Logo}
-                alt="Logo"
-                style={{
-                  height: "64px",
-                  borderRadius: "64px",
-                  boxShadow: "0 0 10px rgba(0, 0, 0, 0.8)",
-                }}
-              />
+              <img src={Logo} alt="Logo" className={styles.logo} />
             </Link>
           </Box>
           <Box>
-            <ul
-              style={{
-                listStyle: "none",
-                display: "flex",
-                margin: "0",
-                padding: "0",
-              }}
-            >
+            <ul className={styles.unorderedList}>
               {navigation.map((nav) => {
                 return (
                   <Typography key={nav.id} variant="button">
                     <NavigationItem to={nav.to} exact={nav.exact}>
                       <Button
                         variant="link"
-                        sx={{
-                          padding: "6px 16px !important",
-                        }}
                         style={{ color: theme.palette.secondary.main }}
                       >
                         {nav.icon} {nav.label}

@@ -1,21 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import styles from "./NavigationItem.module.css";
+
 // MATERIAL IMPORTS
 import { theme } from "../../../MaterialColorTheme/MaterialColorTheme";
 
 const NavigationItem = (props) => {
   return (
-    <li style={{ margin: "0 10px" }}>
+    <li className={styles.list}>
       <NavLink
         to={props.to}
         exact={props.exact}
-        style={{
-          textDecoration: "none",
-          color: theme.palette.secondary.main,
-          display: "flex",
-          textAlign: "center",
-        }}
+        style={{ color: theme.palette.secondary.main }}
+        className={styles.text}
       >
         {props.children}
       </NavLink>
