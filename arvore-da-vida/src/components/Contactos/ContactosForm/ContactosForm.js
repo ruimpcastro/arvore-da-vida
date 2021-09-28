@@ -1,20 +1,12 @@
 import React from "react";
+import styles from "./ContactosForm.module.css";
 
 import { Box, Button } from "@material-ui/core";
 import { Typography, TextField } from "@mui/material";
 
 const ContactosForm = () => {
   return (
-    <Box
-      p={5}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        boxShadow:
-          "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
-        borderRadius: "10px",
-      }}
-    >
+    <Box p={5} className={styles.container}>
       <Typography variant="h6">Ou envie-nos uma mensagem</Typography>
       <TextField
         required
@@ -42,7 +34,7 @@ const ContactosForm = () => {
         margin="normal"
       />
       <Button
-        style={{ marginTop: "20px" }}
+        className={styles.button}
         color="primary"
         variant="contained"
         size="large"
