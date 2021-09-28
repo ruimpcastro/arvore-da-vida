@@ -6,9 +6,9 @@ import styles from "./Slideshow.module.css";
 import { Box } from "@mui/material";
 
 // IMAGE IMPORTS
-import produto1 from "../../../assets/products/produto1.jpg";
-import produto2 from "../../../assets/products/produto2.jpg";
-import produto3 from "../../../assets/products/produto3.jpg";
+import produto1 from "../../assets/products/produto1.jpg";
+import produto2 from "../../assets/products/produto2.jpg";
+import produto3 from "../../assets/products/produto3.jpg";
 
 const Slideshow = () => {
   const gallery = [
