@@ -1,6 +1,7 @@
 import React from "react";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import styles from "./SlideshowItem.module.css";
 
 const SlideshowItem = (props) => {
   return (
@@ -18,11 +19,7 @@ const SlideshowItem = (props) => {
       <img
         src={props.image}
         alt={props.name}
-        style={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-        }}
+        className={styles.image}
       />
       <Typography variant="body1">{props.description}</Typography>
     </Paper>
