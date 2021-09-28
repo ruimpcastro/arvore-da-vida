@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./ContactosInfo.module.css";
 import { Box, Button, Typography } from "@material-ui/core";
 import CallSharpIcon from "@mui/icons-material/CallSharp";
 import DialpadSharpIcon from "@mui/icons-material/DialpadSharp";
@@ -13,42 +14,16 @@ const ContactosInfo = () => {
   };
   return (
     <Box>
-      <Box
-        mb={3}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          textAlign: "center",
-        }}
-      >
+      <Box mb={3} className={styles.container}>
         {info.empresa && (
-          <Typography
-            variant="h5"
-            gutterBottom
-            style={{ fontWeight: "500" }}
-          >
+          <Typography variant="h5" gutterBottom style={{ fontWeight: "500" }}>
             {info.empresa}
           </Typography>
         )}
 
-        <Box
-          p={5}
-          sx={{
-            boxShadow:
-              "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
-            borderRadius: "10px",
-            textAlign: "start",
-            marginTop: "20px",
-          }}
-        >
+        <Box p={5} className={styles.contactBox}>
           <Typography variant="h6">Entre em contacto connosco</Typography>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
+          <Box className={styles.contacts}>
             {info.telefone && (
               <a
                 href={`tel:+351${info.telefone}`}
@@ -77,7 +52,7 @@ const ContactosInfo = () => {
                 <Button variant="text">
                   <Typography
                     variant="body1"
-                    style={{ display: "flex", margin: "10px 0" }}
+                    style={{ display: "flex", margin: "10px 5px 10px 5px" }}
                   >
                     <DialpadSharpIcon style={{ marginRight: "5px" }} />
                     {info.telemovel}
@@ -93,7 +68,7 @@ const ContactosInfo = () => {
                 <Button variant="text" style={{ textTransform: "none" }}>
                   <Typography
                     variant="body1"
-                    style={{ display: "flex", margin: "10px 0" }}
+                    style={{ display: "flex", margin: "10px 5px 10px 5px" }}
                   >
                     <EmailSharpIcon style={{ marginRight: "5px" }} />{" "}
                     {info.mail}
