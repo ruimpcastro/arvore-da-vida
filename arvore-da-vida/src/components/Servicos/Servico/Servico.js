@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Servico.module.css";
 
 import { Card } from "@mui/material";
 import {
@@ -12,14 +13,7 @@ import CallSharpIcon from "@mui/icons-material/CallSharp";
 
 const Servico = (props) => {
   return (
-    <Card
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        height: "100%",
-        justifyContent: "space-between",
-      }}
-    >
+    <Card className={styles.servicoCard}>
       <CardMedia
         component="img"
         sx={{ minWidth: 200, maxWidth: "30%" }}
@@ -39,9 +33,8 @@ const Servico = (props) => {
           style={{ textDecoration: "none" }}
         >
           <Button variant="text" size="small">
-            <Typography style={{ display: "flex" }}>
-              <CallSharpIcon style={{ marginRight: "5px" }} /> Marque a sua
-              consulta
+            <Typography className={styles.text}>
+              <CallSharpIcon className={styles.icons} /> Marque a sua consulta
             </Typography>
           </Button>
         </a>
