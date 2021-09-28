@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../../components/Navigation/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
@@ -65,6 +66,7 @@ class SobreNos extends Component {
             })}
           </Container>
         </Box>
+        <Footer />
       </div>
     );
   }
