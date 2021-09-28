@@ -1,0 +1,16 @@
+.containerBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.textBox {
+  width: 50%;
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+}
