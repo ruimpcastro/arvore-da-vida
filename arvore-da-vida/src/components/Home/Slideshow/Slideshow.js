@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import SlideshowItem from "./SlideshowItem/SlideshowItem";
+import styles from "./Slideshow.module.css";
 
 import { Box } from "@mui/material";
 
@@ -29,14 +30,7 @@ const Slideshow = () => {
   ];
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        height: "90vh",
-        
-      }}
-    >
+    <Box className={styles.container}>
       <Carousel interval="3000" indicators="false">
         {gallery.map((image, i) => (
           <SlideshowItem
