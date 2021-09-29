@@ -5,3 +5,11 @@
     align-items: center;
   }
 }
+
+@media only screen and (max-width: 1199px) {
+  .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

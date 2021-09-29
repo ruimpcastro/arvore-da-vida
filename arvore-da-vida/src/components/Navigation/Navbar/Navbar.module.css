@@ -29,3 +29,35 @@
     margin-right: 5px;
   }
 }
+
+@media only screen and (max-width: 1199px) {
+  .box {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .toolbar {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 !important;
+    margin: 0.5% 2% !important;
+  }
+
+  .logo {
+    height: 64px;
+    border-radius: 32px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+
+  .unorderedList {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .icons {
+    margin-right: 5px;
+  }
+}

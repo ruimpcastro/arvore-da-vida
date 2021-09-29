@@ -9,3 +9,15 @@
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 1199px) {
+  .list {
+    margin: 0 10px;
+  }
+
+  .text {
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+  }
+}
