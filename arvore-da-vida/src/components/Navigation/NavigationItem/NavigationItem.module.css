@@ -1,9 +1,11 @@
-.list {
-  margin: 0 10px;
-}
+@media only screen and (min-width: 1200px) {
+  .list {
+    margin: 0 10px;
+  }
 
-.text {
-  text-decoration: none;
-  display: flex;
-  text-align: center;
+  .text {
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+  }
 }

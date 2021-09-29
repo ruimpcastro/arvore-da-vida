@@ -1,16 +1,18 @@
-.containerBox {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  align-content: center;
-}
+@media only screen and (min-width: 1200px) {
+  .containerBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+  }
 
-.textBox {
-  width: 50%;
-}
+  .textBox {
+    width: 50%;
+  }
 
-.contactBox {
-  display: flex;
-  flex-direction: column;
+  .contactBox {
+    display: flex;
+    flex-direction: column;
+  }
 }

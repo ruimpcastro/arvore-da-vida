@@ -1,14 +1,16 @@
-.servicoCard {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-}
+@media only screen and (min-width: 1200px) {
+  .servicoCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
 
-.text {
-  display: flex;
-}
+  .text {
+    display: flex;
+  }
 
-.icons {
-  margin-right: 5px;
+  .icons {
+    margin-right: 5px;
+  }
 }
