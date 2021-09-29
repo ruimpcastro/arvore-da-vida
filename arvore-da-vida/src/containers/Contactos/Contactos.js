@@ -14,10 +14,12 @@ class Contactos extends Component {
         <Box mt={5}>
           <Container>
             <Box className={styles.containerBox} mb={5}>
-              <Box className={styles.textBox}>
-                <Typography variant="h2">
-                  Não tenha dúvidas. Entre em contacto connosco
-                </Typography>
+              <Box sx={{display: 'flex', justifyContent: 'center'}}>
+                <Box className={styles.textBox}>
+                  <Typography variant="h2">
+                    Não tenha dúvidas. Entre em contacto connosco
+                  </Typography>
+                </Box>
               </Box>
               <Box className={styles.contactBox}>
                 <ContactosInfo />
