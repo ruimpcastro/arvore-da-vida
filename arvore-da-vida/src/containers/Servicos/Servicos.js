@@ -12,46 +12,48 @@ import servico4 from "../../assets/services/servico4.png";
 class Servicos extends Component {
   constructor() {
     super();
-    this.state = [
-      {
-        id: 0,
-        image: servico1,
-        title: "Naturopatia",
-        contacto: "912345678",
-        description:
-          "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel e continua a dar consultas no nosso Centro.",
-      },
-      {
-        id: 1,
-        image: servico2,
-        title: "Naturopatia",
-        contacto: "912345678",
-        description: "O Dr. Leonardo Pacheco",
-      },
-      {
-        id: 2,
-        image: servico1,
-        title: "Naturopatia",
-        contacto: "912345678",
-        description:
-          "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel.",
-      },
-      {
-        id: 4,
-        image: servico2,
-        title: "Naturopatia",
-        contacto: "912345678",
-        description:
-          "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel e continua a dar consultas no nosso Centro.",
-      },
-      {
-        id: 5,
-        image: servico1,
-        title: "Naturopatia",
-        contacto: "912345678",
-        description: "O Dr. Leonardo Pacheco",
-      },
-    ];
+    this.state = {
+      servicos: [
+        {
+          id: 0,
+          image: servico1,
+          title: "Naturopatia",
+          contacto: "912345678",
+          description:
+            "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel e continua a dar consultas no nosso Centro.",
+        },
+        {
+          id: 1,
+          image: servico2,
+          title: "Naturopatia",
+          contacto: "912345678",
+          description: "O Dr. Leonardo Pacheco",
+        },
+        {
+          id: 2,
+          image: servico1,
+          title: "Naturopatia",
+          contacto: "912345678",
+          description:
+            "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel.",
+        },
+        {
+          id: 4,
+          image: servico2,
+          title: "Naturopatia",
+          contacto: "912345678",
+          description:
+            "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel e continua a dar consultas no nosso Centro.",
+        },
+        {
+          id: 5,
+          image: servico1,
+          title: "Naturopatia",
+          contacto: "912345678",
+          description: "O Dr. Leonardo Pacheco",
+        },
+      ],
+    };
   }
   render() {
     return (
@@ -62,10 +64,9 @@ class Servicos extends Component {
           <Grid
             container
             spacing={2}
-            rowSpacing={3}
             style={{ display: "flex" }}
           >
-            {this.state.map((servico) => (
+            {this.state.servicos.map((servico) => (
               <Grid item xs={4} key={servico.id} zeroMinWidth>
                 <Servico
                   image={servico.image}
