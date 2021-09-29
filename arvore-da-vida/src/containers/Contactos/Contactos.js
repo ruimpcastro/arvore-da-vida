@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styles from "./Contactos.module.css";
+import Layout from "../../hoc/Layout/Layout";
 
 import { Box, Container, Typography } from "@material-ui/core";
-import Navbar from "../../components/Navigation/Navbar/Navbar";
 import ContactosForm from "../../components/Contactos/ContactosForm/ContactosForm";
 import ContactosInfo from "../../components/Contactos/ContactosInfo/ContactosInfo";
 import ContactosMap from "../../components/Contactos/ContactosMap/ContactosMap";
@@ -10,8 +10,7 @@ import ContactosMap from "../../components/Contactos/ContactosMap/ContactosMap";
 class Contactos extends Component {
   render() {
     return (
-      <div>
-        <Navbar />
+      <Layout>
         <Box mt={5}>
           <Container>
             <Box className={styles.containerBox} mb={5}>
@@ -27,10 +26,12 @@ class Contactos extends Component {
             </Box>
           </Container>
           <Container>
-            <ContactosMap />
+            <Box mb={5}>
+              <ContactosMap />
+            </Box>
           </Container>
         </Box>
-      </div>
+      </Layout>
     );
   }
 }

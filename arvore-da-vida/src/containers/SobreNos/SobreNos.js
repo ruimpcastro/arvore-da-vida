@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "../../components/Navigation/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
+import Layout from "../../hoc/Layout/Layout";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
@@ -50,8 +49,7 @@ class SobreNos extends Component {
       }
     };
     return (
-      <div>
-        <Navbar />
+      <Layout>
         <Box mt={5}>
           <Container>
             {this.state.sobrenos.map((item, index) => {
@@ -68,8 +66,7 @@ class SobreNos extends Component {
             })}
           </Container>
         </Box>
-        <Footer />
-      </div>
+      </Layout>
     );
   }
 }

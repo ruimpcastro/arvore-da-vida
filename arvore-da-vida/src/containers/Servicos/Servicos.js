@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import Navbar from "../../components/Navigation/Navbar/Navbar";
+import Layout from "../../hoc/Layout/Layout";
 import Servico from "../../components/Servicos/Servico/Servico";
 
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, Box } from "@material-ui/core";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
-import servico3 from "../../assets/services/servico3.png";
-import servico4 from "../../assets/services/servico4.png";
 
 class Servicos extends Component {
   constructor() {
@@ -57,29 +55,25 @@ class Servicos extends Component {
   }
   render() {
     return (
-      <div>
-        <Navbar />
+      <Layout>
         <Container>
-          <h1>Servicos</h1>
-          <Grid
-            container
-            spacing={2}
-            style={{ display: "flex" }}
-          >
-            {this.state.servicos.map((servico) => (
-              <Grid item xs={4} key={servico.id} zeroMinWidth>
-                <Servico
-                  image={servico.image}
-                  title={servico.title}
-                  contacto={servico.contacto}
-                >
-                  {servico.description}
-                </Servico>
-              </Grid>
-            ))}
-          </Grid>
+          <Box mt={5} mb={5}>
+            <Grid container spacing={2} style={{ display: "flex" }}>
+              {this.state.servicos.map((servico) => (
+                <Grid item xs={4} key={servico.id} zeroMinWidth>
+                  <Servico
+                    image={servico.image}
+                    title={servico.title}
+                    contacto={servico.contacto}
+                  >
+                    {servico.description}
+                  </Servico>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Container>
-      </div>
+      </Layout>
     );
   }
 }
