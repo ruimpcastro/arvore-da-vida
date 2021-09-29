@@ -2,10 +2,11 @@ import React from "react";
 import { theme } from "../../MaterialColorTheme/MaterialColorTheme";
 import Logo from "../../assets/Logo.jpg";
 
-import { Typography, Box } from "@material-ui/core";
+import { Typography, Box, IconButton } from "@material-ui/core";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CopyrightIcon from "@mui/icons-material/Copyright";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,10 +32,47 @@ const Footer = () => {
           justifyContent: "center",
         }}
       >
-        <FacebookIcon fontSize="large" style={{ marginRight: "5px" }} /> |{" "}
-        <InstagramIcon fontSize="large" style={{ marginLeft: "5px" }} />
+        <a
+          href="https://www.facebook.com/CENTROHOLISTICOARVOREDAVIDA/?ref=page_internal"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconButton>
+            <FacebookIcon
+              fontSize="large"
+              style={{
+                marginRight: "5px",
+                color: theme.palette.primary.contrastText,
+              }}
+            />
+          </IconButton>
+        </a>{" "}
+        |{" "}
+        <a
+          href="https://www.instagram.com/centroarvoredavida/?fbclid=IwAR0N90Rwvwit9XYb63z7PpwAVoxiCn8U1bZdywd92CpqY03TstXx_y6GzSg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconButton>
+            <InstagramIcon
+              fontSize="large"
+              style={{
+                marginLeft: "5px",
+                color: theme.palette.primary.contrastText,
+              }}
+            />
+          </IconButton>
+        </a>
       </Typography>
-      <Box mt={1}>
+      <Box
+        mt={1}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Typography
           variant="body1"
           style={{
