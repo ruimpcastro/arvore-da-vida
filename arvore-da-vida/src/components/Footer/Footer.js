@@ -4,9 +4,9 @@ import { theme } from "../../MaterialColorTheme/MaterialColorTheme";
 import Logo from "../../assets/Logo.jpg";
 
 import { Typography, Box, IconButton } from "@material-ui/core";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import FacebookSharpIcon from "@mui/icons-material/FacebookSharp";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import CopyrightIcon from "@mui/icons-material/Copyright";
+import CopyrightSharpIcon from "@mui/icons-material/CopyrightSharp";
 
 const Footer = () => {
   return (
@@ -26,7 +26,7 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <IconButton>
-            <FacebookIcon
+            <FacebookSharpIcon
               fontSize="large"
               style={{
                 color: theme.palette.primary.contrastText,
@@ -55,8 +55,8 @@ const Footer = () => {
       <Box mt={1} className={styles.copyrightBox}>
         <Typography variant="body1" className={styles.copyrightText}>
           Copyright{" "}
-          <CopyrightIcon fontSize="small" className={styles.copyright} /> 2021,
-          MO
+          <CopyrightSharpIcon fontSize="small" className={styles.copyright} />{" "}
+          2021, MO
         </Typography>
       </Box>
     </Box>

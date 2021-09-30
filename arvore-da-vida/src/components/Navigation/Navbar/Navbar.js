@@ -1,21 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import NavigationItem from "../NavigationItem/NavigationItem";
 import Logo from "../../../assets/Logo.jpg";
 
 // MATERIAL IMPORTS
-import { AppBar, Box, Toolbar, Button, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Button,
+  IconButton,
+  Typography,
+} from "@mui/material";
 
 import InfoSharpIcon from "@mui/icons-material/InfoSharp";
 import MedicalServicesSharpIcon from "@mui/icons-material/MedicalServicesSharp";
 import ImportContactsSharpIcon from "@mui/icons-material/ImportContactsSharp";
+import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 
 import { theme } from "../../../MaterialColorTheme/MaterialColorTheme";
 
 // REACT-ROUTER-DOM IMPORTS
 import { Link } from "react-router-dom";
 
+import { BrowserView, MobileView } from "react-device-detect";
+
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setOpen(!open);
+    console.log(open);
+  };
+
   const navigation = [
     {
       id: "1",
@@ -39,6 +56,7 @@ const Navbar = () => {
       label: " Contactos",
     },
   ];
+
   return (
     <Box className={styles.box}>
       <AppBar
@@ -55,25 +73,27 @@ const Navbar = () => {
             </Link>
           </Box>
           <Box>
-            <ul className={styles.unorderedList}>
-              {navigation.map((nav) => {
-                return (
-                  <Typography key={nav.id} variant="button">
-                    <NavigationItem to={nav.to} exact={nav.exact}>
-                      <Button
-                        variant="link"
-                        style={{
-                          color: theme.palette.secondary.main,
-                          padding: "6px 16px",
-                        }}
-                      >
-                        {nav.icon} {nav.label}
-                      </Button>
-                    </NavigationItem>
-                  </Typography>
-                );
-              })}
-            </ul>
+            <BrowserView>
+              <ul className={styles.unorderedList}>
+                {navigation.map((nav) => {
+                  return (
+                    <Typography key={nav.id} variant="button">
+                      <NavigationItem to={nav.to} exact={nav.exact}>
+                        <Button
+                          variant="link"
+                          style={{
+                            color: theme.palette.secondary.main,
+                            padding: "6px 16px",
+                          }}
+                        >
+                          {nav.icon} {nav.label}
+                        </Button>
+                      </NavigationItem>
+                    </Typography>
+                  );
+                })}
+              </ul>
+            </BrowserView>
           </Box>
         </Toolbar>
       </AppBar>
