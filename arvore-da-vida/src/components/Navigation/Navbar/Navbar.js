@@ -22,13 +22,16 @@ import { theme } from "../../../MaterialColorTheme/MaterialColorTheme";
 
 // REACT-ROUTER-DOM IMPORTS
 import { Link } from "react-router-dom";
-
-import { BrowserView, MobileView } from "react-device-detect";
+import SideDrawer from "../SideDrawer/SideDrawer";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const toggleDrawer = () => {
     setOpen(!open);
     console.log(open);
   };
@@ -73,27 +76,36 @@ const Navbar = () => {
             </Link>
           </Box>
           <Box>
-            <BrowserView>
+            {window.innerWidth >= 600 ? (
               <ul className={styles.unorderedList}>
-                {navigation.map((nav) => {
-                  return (
-                    <Typography key={nav.id} variant="button">
-                      <NavigationItem to={nav.to} exact={nav.exact}>
-                        <Button
-                          variant="link"
-                          style={{
-                            color: theme.palette.secondary.main,
-                            padding: "6px 16px",
-                          }}
-                        >
-                          {nav.icon} {nav.label}
-                        </Button>
-                      </NavigationItem>
-                    </Typography>
-                  );
-                })}
+                {navigation.map((nav) => (
+                  <Typography key={nav.id} variant="button">
+                    <NavigationItem to={nav.to} exact={nav.exact}>
+                      <Button
+                        variant="link"
+                        style={{
+                          color: theme.palette.secondary.main,
+                          padding: "6px 16px",
+                        }}
+                      >
+                        {nav.icon} {nav.label}
+                      </Button>
+                    </NavigationItem>
+                  </Typography>
+                ))}
               </ul>
-            </BrowserView>
+            ) : (
+              <Box>
+                <IconButton onClick={toggleDrawer}>
+                  <MenuSharpIcon />
+                </IconButton>
+                <SideDrawer
+                  open={open}
+                  handleClose={handleClose}
+                  onToggleDrawer={toggleDrawer}
+                />
+              </Box>
+            )}
           </Box>
         </Toolbar>
       </AppBar>

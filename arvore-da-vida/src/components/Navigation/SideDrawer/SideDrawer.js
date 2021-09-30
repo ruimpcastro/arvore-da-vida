@@ -15,14 +15,10 @@ import ImportContactsSharpIcon from "@mui/icons-material/ImportContactsSharp";
 import { Link } from "react-router-dom";
 
 export const SideDrawer = (props) => {
-  const [open, setOpen] = useState(true);
-
-  const toggleDrawer = () => {
-    setOpen(!open);
-  };
+  const [open, setOpen] = useState(false);
 
   const handleClose = () => {
-    setOpen(false);
+    props.handleClose();
   };
 
   const navigation = [
@@ -50,13 +46,7 @@ export const SideDrawer = (props) => {
   ];
 
   return (
-    <Drawer
-      width={300}
-      open={open}
-      handleClose={handleClose}
-      onToggleDrawer={toggleDrawer}
-      anchor="left"
-    >
+    <Drawer anchor="left" open={props.open} onClose={handleClose}>
       <div
         style={{ backgroundColor: theme.palette.primary.main, height: "100vh" }}
       >
@@ -67,7 +57,7 @@ export const SideDrawer = (props) => {
             alignItems: "center",
           }}
         >
-          <Box mt={2} mb={1}>
+          <Box mt={3} mb={2}>
             <Link to="/">
               <img
                 src={Logo}
@@ -79,10 +69,11 @@ export const SideDrawer = (props) => {
           <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
             {navigation.map((nav) => {
               return (
-                <Box mb={1}>
-                  <Typography key={nav.id} variant="button">
+                <Box key={nav.id} mb={1}>
+                  <Typography variant="button">
                     <NavigationItem to={nav.to} exact={nav.exact}>
                       <Button
+                        onClick={handleClose}
                         variant="link"
                         style={{
                           color: theme.palette.secondary.main,
