@@ -12,11 +12,11 @@ class Contactos extends Component {
     return (
       <Layout>
         <Box mt={5}>
-          <Container>
+          <Container className={styles.container}>
             <Box className={styles.containerBox} mb={5}>
-              <Box sx={{display: 'flex', justifyContent: 'center'}}>
+              <Box className={styles.justifyText}>
                 <Box className={styles.textBox}>
-                  <Typography variant="h2">
+                  <Typography variant="h2" className={styles.title}>
                     Não tenha dúvidas. Entre em contacto connosco
                   </Typography>
                 </Box>

@@ -18,8 +18,12 @@
 }
 
 @media only screen and (max-width: 1199px) {
-  .containerBox {
+  .container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+  .containerBox {
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -30,12 +34,15 @@
     justify-content: center;
   }
 
-  .textBox {
-    width: 50%;
+  .title {
+    text-align: center;
   }
 
   .contactBox {
     display: flex;
     flex-direction: column;
   }
+}
+
+@media only screen and (max-width: 800px) {
 }

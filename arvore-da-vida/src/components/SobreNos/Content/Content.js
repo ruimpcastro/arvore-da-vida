@@ -34,7 +34,7 @@ const Content = (props) => {
               width="50%"
               className={styles.image}
             />
-            <Box mr={5} className={styles.textBox}>
+            <Box className={styles.textBox}>
               <Typography variant="h3">{props.title}</Typography>
               <Typography variant="body1">{props.body}</Typography>
             </Box>

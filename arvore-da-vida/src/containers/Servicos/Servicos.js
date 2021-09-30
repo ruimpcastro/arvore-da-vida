@@ -58,9 +58,13 @@ class Servicos extends Component {
       <Layout>
         <Container>
           <Box mt={5} mb={5}>
-            <Grid container spacing={2} style={{ display: "flex" }}>
+            <Grid
+              container
+              spacing={2}
+              style={{ display: "flex" }}
+            >
               {this.state.servicos.map((servico) => (
-                <Grid item xs={4} key={servico.id} zeroMinWidth>
+                <Grid item xs={12} sm={6} key={servico.id} zeroMinWidth>
                   <Servico
                     image={servico.image}
                     title={servico.title}
