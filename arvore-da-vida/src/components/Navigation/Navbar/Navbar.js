@@ -33,7 +33,6 @@ const Navbar = () => {
 
   const toggleDrawer = () => {
     setOpen(!open);
-    console.log(open);
   };
 
   const navigation = [
@@ -97,7 +96,9 @@ const Navbar = () => {
             ) : (
               <Box>
                 <IconButton onClick={toggleDrawer}>
-                  <MenuSharpIcon />
+                  <MenuSharpIcon
+                    style={{ color: theme.palette.secondary.main }}
+                  />
                 </IconButton>
                 <SideDrawer
                   open={open}
