@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import NavigationItem from "../NavigationItem/NavigationItem";
 import Logo from "../../../assets/Logo.jpg";
+import { BrowserView, MobileView } from "react-device-detect";
 
 // MATERIAL IMPORTS
 import {
@@ -75,7 +76,7 @@ const Navbar = () => {
             </Link>
           </Box>
           <Box>
-            {window.innerWidth >= 600 ? (
+            <BrowserView>
               <ul className={styles.unorderedList}>
                 {navigation.map((nav) => (
                   <Typography key={nav.id} variant="button">
@@ -93,7 +94,8 @@ const Navbar = () => {
                   </Typography>
                 ))}
               </ul>
-            ) : (
+            </BrowserView>
+            <MobileView>
               <Box>
                 <IconButton onClick={toggleDrawer}>
                   <MenuSharpIcon
@@ -106,7 +108,7 @@ const Navbar = () => {
                   onToggleDrawer={toggleDrawer}
                 />
               </Box>
-            )}
+            </MobileView>
           </Box>
         </Toolbar>
       </AppBar>

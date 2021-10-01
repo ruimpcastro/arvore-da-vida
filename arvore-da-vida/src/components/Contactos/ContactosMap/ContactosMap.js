@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./ContactosMap.module.css"
 
 const ContactosMap = () => (
   <iframe
@@ -11,6 +12,7 @@ const ContactosMap = () => (
     scrolling="no"
     marginHeight="0"
     marginWidth="0"
+    className={styles.mapa}
   />
 );
 
