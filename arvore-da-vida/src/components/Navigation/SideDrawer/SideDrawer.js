@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Logo from "../../../assets/Logo.jpg";
 
@@ -14,9 +14,7 @@ import ImportContactsSharpIcon from "@mui/icons-material/ImportContactsSharp";
 // REACT-ROUTER-DOM IMPORTS
 import { Link } from "react-router-dom";
 
-export const SideDrawer = (props) => {
-  const [open, setOpen] = useState(false);
-
+const SideDrawer = (props) => {
   const handleClose = () => {
     props.handleClose();
   };
@@ -26,29 +24,38 @@ export const SideDrawer = (props) => {
       id: "1",
       to: "/sobrenos",
       exact: true,
-      icon: <InfoSharpIcon />,
+      icon: <InfoSharpIcon style={{ marginRight: "5px" }} />,
       label: "Sobre nós",
     },
     {
       id: "2",
       to: "/servicos",
       exact: true,
-      icon: <MedicalServicesSharpIcon />,
+      icon: <MedicalServicesSharpIcon style={{ marginRight: "5px" }} />,
       label: " Serviços",
     },
     {
       id: "3",
       to: "/contactos",
       exact: true,
-      icon: <ImportContactsSharpIcon />,
+      icon: <ImportContactsSharpIcon style={{ marginRight: "5px" }} />,
       label: " Contactos",
     },
   ];
 
   return (
-    <Drawer anchor="left" open={props.open} onClose={handleClose}>
+    <Drawer
+      anchor="left"
+      open={props.open}
+      onClose={handleClose}
+      sx={{ width: "800px" }}
+    >
       <div
-        style={{ backgroundColor: theme.palette.primary.main, height: "100vh" }}
+        style={{
+          backgroundColor: theme.palette.primary.main,
+          height: "100vh",
+          width: "256px",
+        }}
       >
         <Box
           style={{
@@ -69,7 +76,7 @@ export const SideDrawer = (props) => {
           <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
             {navigation.map((nav) => {
               return (
-                <Box key={nav.id} mb={1}>
+                <Box key={nav.id} mb={2}>
                   <Typography variant="button">
                     <NavigationItem to={nav.to} exact={nav.exact}>
                       <Button
@@ -84,6 +91,10 @@ export const SideDrawer = (props) => {
                       </Button>
                     </NavigationItem>
                   </Typography>
+                  <Divider
+                    variant="middle"
+                    style={{ backgroundColor: theme.palette.secondary.main }}
+                  />
                 </Box>
               );
             })}

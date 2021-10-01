@@ -6,6 +6,11 @@
     border-radius: 10px;
   }
 
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
   .button {
     margin-top: 20px;
   }
@@ -20,5 +25,10 @@
 
   .button {
     margin-top: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
   }
 }

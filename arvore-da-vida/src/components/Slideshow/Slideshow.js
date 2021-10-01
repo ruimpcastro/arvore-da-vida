@@ -31,7 +31,7 @@ const Slideshow = () => {
 
   return (
     <Box className={styles.container}>
-      <Carousel interval="3000" indicators="false">
+      <Carousel animation="slide" interval="3000" indicators="false">
         {gallery.map((image, i) => (
           <SlideshowItem
             image={image.image}

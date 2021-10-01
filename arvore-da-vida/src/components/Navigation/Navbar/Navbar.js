@@ -102,6 +102,7 @@ const Navbar = () => {
                     style={{ color: theme.palette.secondary.main }}
                   />
                 </IconButton>
+
                 <SideDrawer
                   open={open}
                   handleClose={handleClose}
