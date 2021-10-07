@@ -1,15 +1,23 @@
 import React from "react";
 import styles from "./Content.module.css";
 
+import { useSpring, animated } from "react-spring";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 
 const Content = (props) => {
+  const animate = useSpring({
+    from: { opacity: 0, scale: 0.9, y: 100 },
+    to: { opacity: 1, scale: 1, y: 0 },
+    delay: props.delay * 100,
+  });
+
+  const AnimatedBox = animated(Box);
   const layoutStyle = props.layoutStyle;
   let layout = (
     <Box className={styles.boxContainer}>
       <Container>
-        <Box className={styles.containerBox}>
+        <AnimatedBox className={styles.containerBox} style={animate}>
           <img
             src={props.image}
             alt={props.alt}
@@ -20,7 +28,7 @@ const Content = (props) => {
             <Typography variant="h3">{props.title}</Typography>
             <Typography variant="body1">{props.body}</Typography>
           </Box>
-        </Box>
+        </AnimatedBox>
       </Container>
     </Box>
   );
@@ -28,7 +36,7 @@ const Content = (props) => {
     layout = (
       <Box className={styles.boxContainer}>
         <Container>
-          <Box className={styles.containerBoxReversed}>
+          <AnimatedBox className={styles.containerBoxReversed} style={animate}>
             <img
               src={props.image}
               alt={props.alt}
@@ -39,7 +47,7 @@ const Content = (props) => {
               <Typography variant="h3">{props.title}</Typography>
               <Typography variant="body1">{props.body}</Typography>
             </Box>
-          </Box>
+          </AnimatedBox>
         </Container>
       </Box>
     );

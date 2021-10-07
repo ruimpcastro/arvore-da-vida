@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Servico.module.css";
+import { useSpring, animated } from "react-spring";
 
 import {
   Button,
@@ -12,8 +13,16 @@ import {
 import CallSharpIcon from "@mui/icons-material/CallSharp";
 
 const Servico = (props) => {
+  const animate = useSpring({
+    from: { opacity: 0, scale: 0.9, y: 100 },
+    to: { opacity: 1, scale: 1, y: 0 },
+    delay: props.delay * 100,
+  });
+
+  const AnimatedCard = animated(Card);
+
   return (
-    <Card className={styles.servicoCard}>
+    <AnimatedCard style={animate} className={styles.servicoCard}>
       <CardMedia
         component="img"
         sx={{ minWidth: 200 }}
@@ -39,7 +48,7 @@ const Servico = (props) => {
           </Button>
         </a>
       </CardActions>
-    </Card>
+    </AnimatedCard>
   );
 };
 

@@ -1,21 +1,32 @@
 import React from "react";
 import styles from "./ContactosInfo.module.css";
+import { useSpring, animated } from "react-spring";
+
 import Box from "@mui/material/Box";
 import { Button, Typography } from "@mui/material";
 import CallSharpIcon from "@mui/icons-material/CallSharp";
 import DialpadSharpIcon from "@mui/icons-material/DialpadSharp";
 import EmailSharpIcon from "@mui/icons-material/EmailSharp";
 
-const ContactosInfo = () => {
+const ContactosInfo = (props) => {
   const info = {
     empresa: "Centro Holístico Árvore da Vida, Sociedade Unipessoal Lda.",
     telefone: "296285239",
     telemovel: false,
     mail: "infoarvoredavida@gmail.com",
   };
+
+  const animate = useSpring({
+    from: { opacity: 0, scale: 0.9, y: 100 },
+    to: { opacity: 1, scale: 1, y: 0 },
+    delay: props.delay * 100,
+  });
+
+  const AnimatedBox = animated(Box);
+
   return (
     <Box>
-      <Box mb={3} className={styles.container}>
+      <AnimatedBox style={animate} mb={3} className={styles.container}>
         {info.empresa && (
           <Typography variant="h5" gutterBottom style={{ fontWeight: "500" }}>
             {info.empresa}
@@ -79,7 +90,7 @@ const ContactosInfo = () => {
             )}
           </Box>
         </Box>
-      </Box>
+      </AnimatedBox>
     </Box>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import { useSpring, animated } from "react-spring";
 
 import styles from "./ContactosForm.module.css";
 
@@ -8,7 +9,7 @@ import { Typography, TextField, Button } from "@mui/material";
 
 import SendSharpIcon from "@mui/icons-material/SendSharp";
 
-const ContactosForm = () => {
+const ContactosForm = (props) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -32,8 +33,16 @@ const ContactosForm = () => {
     e.target.reset();
   };
 
+  const animate = useSpring({
+    from: { opacity: 0, scale: 0.9, y: 100 },
+    to: { opacity: 1, scale: 1, y: 0 },
+    delay: props.delay * 100,
+  });
+
+  const AnimatedBox = animated(Box);
+
   return (
-    <Box p={5} className={styles.container}>
+    <AnimatedBox style={animate} p={5} className={styles.container}>
       <Typography variant="h6">Ou envie-nos uma mensagem</Typography>
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <TextField
@@ -77,7 +86,7 @@ const ContactosForm = () => {
           Send
         </Button>
       </form>
-    </Box>
+    </AnimatedBox>
   );
 };
 

@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "./Slideshow.module.css";
+import { useSpring, animated } from "react-spring";
 import Carousel from "react-material-ui-carousel";
 import SlideshowItem from "./SlideshowItem/SlideshowItem";
-import styles from "./Slideshow.module.css";
 
 import { Box } from "@mui/material";
 
@@ -29,8 +30,16 @@ const Slideshow = () => {
     },
   ];
 
+  const animate = useSpring({
+    from: { opacity: 0, scale: 0.9, y: 100 },
+    to: { opacity: 1, scale: 1, y: 0 },
+    delay: 200,
+  });
+
+  const AnimatedBox = animated(Box);
+
   return (
-    <Box className={styles.container}>
+    <AnimatedBox style={animate} className={styles.container}>
       <Carousel animation="slide" interval="3000" indicators="false">
         {gallery.map((image, i) => (
           <SlideshowItem
@@ -41,7 +50,7 @@ const Slideshow = () => {
           />
         ))}
       </Carousel>
-    </Box>
+    </AnimatedBox>
   );
 };
 

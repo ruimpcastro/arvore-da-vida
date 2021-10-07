@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Layout from "../../hoc/Layout/Layout";
 import Servico from "../../components/Servicos/Servico/Servico";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 import { Container, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
-import Spinner from "../../components/UI/Spinner/Spinner";
 
 class Servicos extends Component {
   constructor() {
@@ -84,6 +84,7 @@ class Servicos extends Component {
                     image={servico.image}
                     title={servico.title}
                     contacto={servico.contacto}
+                    delay={servico.id}
                   >
                     {servico.description}
                   </Servico>

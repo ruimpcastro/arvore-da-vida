@@ -2,8 +2,9 @@ import React, { Component, setState } from "react";
 import styles from "./Contactos.module.css";
 import Layout from "../../hoc/Layout/Layout";
 
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
+import ContactosIntro from "../../components/Contactos/ContactosIntro/ContactosIntro";
 import ContactosForm from "../../components/Contactos/ContactosForm/ContactosForm";
 import ContactosInfo from "../../components/Contactos/ContactosInfo/ContactosInfo";
 import ContactosMap from "../../components/Contactos/ContactosMap/ContactosMap";
@@ -36,21 +37,17 @@ class Contactos extends Component {
           <Container className={styles.container}>
             <Box className={styles.containerBox} mb={5}>
               <Box className={styles.justifyText}>
-                <Box className={styles.textBox}>
-                  <Typography variant="h2" className={styles.title}>
-                    Não tenha dúvidas. Entre em contacto connosco
-                  </Typography>
-                </Box>
+                <ContactosIntro textBox={styles.textBox} title={styles.title} />
               </Box>
               <Box className={styles.contactBox}>
-                <ContactosInfo />
-                <ContactosForm />
+                <ContactosInfo delay={2} />
+                <ContactosForm delay={3} />
               </Box>
             </Box>
           </Container>
           <Container>
             <Box mb={5}>
-              <ContactosMap />
+              <ContactosMap delay={4} />
             </Box>
           </Container>
         </Box>

@@ -79,6 +79,7 @@ class SobreNos extends Component {
                   alt={item.alt}
                   title={item.title}
                   body={item.body}
+                  delay={index}
                 />
               );
             })}
