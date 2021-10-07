@@ -9,6 +9,8 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./MaterialColorTheme/MaterialColorTheme";
 
+reportWebVitals(console.log);
+
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>

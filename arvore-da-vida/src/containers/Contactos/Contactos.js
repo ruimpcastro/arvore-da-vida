@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import ContactosForm from "../../components/Contactos/ContactosForm/ContactosForm";
 import ContactosInfo from "../../components/Contactos/ContactosInfo/ContactosInfo";
 import ContactosMap from "../../components/Contactos/ContactosMap/ContactosMap";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 class Contactos extends Component {
   constructor() {
@@ -19,7 +20,7 @@ class Contactos extends Component {
   }
   render() {
     return this.state.isLoading ? (
-      <h1>LOADING</h1>
+      <Spinner />
     ) : (
       <Layout>
         <Box mt={5}>

@@ -6,12 +6,14 @@ import servico2 from "../../assets/services/servico2.jpg";
 
 import { Container } from "@mui/material";
 import Content from "../../components/SobreNos/Content/Content";
-import Box from '@mui/material/Box';
+import Box from "@mui/material/Box";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 class SobreNos extends Component {
   constructor() {
     super();
     this.state = {
+      isLoading: true,
       sobrenos: [
         {
           image: servico1,
@@ -40,6 +42,11 @@ class SobreNos extends Component {
       ],
     };
   }
+
+  componentDidMount() {
+    this.setState({ isLoading: false });
+  }
+
   render() {
     const oddNumber = (index) => {
       if ((index + 1) % 2 === 0) {
@@ -48,7 +55,9 @@ class SobreNos extends Component {
         return false;
       }
     };
-    return (
+    return this.state.isLoading ? (
+      <Spinner />
+    ) : (
       <Layout>
         <Box mt={5}>
           <Container>

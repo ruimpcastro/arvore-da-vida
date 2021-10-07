@@ -16,7 +16,7 @@ const Servico = (props) => {
     <Card className={styles.servicoCard}>
       <CardMedia
         component="img"
-        sx={{ minWidth: 200, maxWidth: "30%" }}
+        sx={{ minWidth: 200 }}
         image={props.image}
         alt={props.title}
       />

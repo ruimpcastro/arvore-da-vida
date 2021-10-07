@@ -12,6 +12,7 @@ class Servicos extends Component {
   constructor() {
     super();
     this.state = {
+      isLoading: true,
       servicos: [
         {
           id: 0,
@@ -54,8 +55,15 @@ class Servicos extends Component {
       ],
     };
   }
+
+  componentDidMount() {
+    this.setState({ isLoading: false });
+  }
+
   render() {
-    return (
+    return this.state.isLoading ? (
+      <Spinner />
+    ) : (
       <Layout>
         <Container>
           <Box mt={5} mb={5}>
