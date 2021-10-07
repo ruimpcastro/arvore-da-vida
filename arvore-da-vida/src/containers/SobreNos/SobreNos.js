@@ -6,7 +6,7 @@ import servico2 from "../../assets/services/servico2.jpg";
 
 import { Container } from "@mui/material";
 import Content from "../../components/SobreNos/Content/Content";
-import { Box } from "@material-ui/core";
+import Box from '@mui/material/Box';
 
 class SobreNos extends Component {
   constructor() {

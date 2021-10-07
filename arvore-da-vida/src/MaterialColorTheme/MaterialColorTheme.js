@@ -1,5 +1,5 @@
-import { createTheme } from "@material-ui/core/styles";
-import { responsiveFontSizes } from "@material-ui/core/";
+import { createTheme } from "@mui/material/styles";
+import { responsiveFontSizes } from "@mui/material/styles";
 
 export let theme = createTheme({
   palette: {

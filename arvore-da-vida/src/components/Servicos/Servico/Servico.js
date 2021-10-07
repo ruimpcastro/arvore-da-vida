@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./Servico.module.css";
 
-import { Card } from "@mui/material";
 import {
   Button,
+  Card,
   CardActions,
   CardContent,
   CardMedia,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 import CallSharpIcon from "@mui/icons-material/CallSharp";
 
 const Servico = (props) => {

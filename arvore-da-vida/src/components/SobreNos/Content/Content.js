@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Content.module.css";
 
-import { Box, Container, Typography } from "@material-ui/core";
+import Box from "@mui/material/Box";
+import { Container, Typography } from "@mui/material";
 
 const Content = (props) => {
   const layoutStyle = props.layoutStyle;

@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
 // MATERIAL IMPORTS
-import { ThemeProvider } from "@material-ui/core";
+import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./MaterialColorTheme/MaterialColorTheme";
 
 ReactDOM.render(

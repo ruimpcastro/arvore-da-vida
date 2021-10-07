@@ -3,8 +3,8 @@ import emailjs from "emailjs-com";
 
 import styles from "./ContactosForm.module.css";
 
-import { Box, Button } from "@material-ui/core";
-import { Typography, TextField } from "@mui/material";
+import Box from "@mui/material/Box";
+import { Typography, TextField, Button } from "@mui/material";
 
 import SendSharpIcon from "@mui/icons-material/SendSharp";
 

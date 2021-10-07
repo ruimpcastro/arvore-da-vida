@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Layout from "../../hoc/Layout/Layout";
 import Servico from "../../components/Servicos/Servico/Servico";
 
-import { Container, Grid, Box } from "@material-ui/core";
+import { Container, Grid } from "@mui/material";
+import Box from "@mui/material/Box";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
@@ -58,11 +59,7 @@ class Servicos extends Component {
       <Layout>
         <Container>
           <Box mt={5} mb={5}>
-            <Grid
-              container
-              spacing={2}
-              style={{ display: "flex" }}
-            >
+            <Grid container spacing={2} style={{ display: "flex" }}>
               {this.state.servicos.map((servico) => (
                 <Grid item xs={12} sm={6} key={servico.id} zeroMinWidth>
                   <Servico

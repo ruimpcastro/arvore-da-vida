@@ -3,7 +3,8 @@ import styles from "./Footer.module.css";
 import { theme } from "../../MaterialColorTheme/MaterialColorTheme";
 import Logo from "../../assets/Logo.jpg";
 
-import { Typography, Box, IconButton } from "@material-ui/core";
+import Box from "@mui/material/Box";
+import { Typography, IconButton } from "@mui/material/";
 import FacebookSharpIcon from "@mui/icons-material/FacebookSharp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CopyrightSharpIcon from "@mui/icons-material/CopyrightSharp";

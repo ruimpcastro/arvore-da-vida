@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ContactosInfo.module.css";
-import { Box, Button, Typography } from "@material-ui/core";
+import Box from "@mui/material/Box";
+import { Button, Typography } from "@mui/material";
 import CallSharpIcon from "@mui/icons-material/CallSharp";
 import DialpadSharpIcon from "@mui/icons-material/DialpadSharp";
 import EmailSharpIcon from "@mui/icons-material/EmailSharp";
