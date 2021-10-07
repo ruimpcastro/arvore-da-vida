@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 class Servicos extends Component {
   constructor() {
@@ -62,7 +63,16 @@ class Servicos extends Component {
 
   render() {
     return this.state.isLoading ? (
-      <Spinner />
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          alignItems: "center",
+          backgroundColor: "#2d2b29",
+        }}
+      >
+        <Spinner />
+      </div>
     ) : (
       <Layout>
         <Container>

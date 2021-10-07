@@ -14,7 +14,16 @@ class Home extends Component {
   }
   render() {
     return this.state.isLoading ? (
-      <Spinner />
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          alignItems: "center",
+          backgroundColor: "#2d2b29",
+        }}
+      >
+        <Spinner />
+      </div>
     ) : (
       <div style={{ overflow: "hidden", height: "100vh" }}>
         <Navbar />

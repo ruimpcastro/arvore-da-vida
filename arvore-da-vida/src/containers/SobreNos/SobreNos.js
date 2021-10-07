@@ -56,7 +56,16 @@ class SobreNos extends Component {
       }
     };
     return this.state.isLoading ? (
-      <Spinner />
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          alignItems: "center",
+          backgroundColor: "#2d2b29",
+        }}
+      >
+        <Spinner />
+      </div>
     ) : (
       <Layout>
         <Box mt={5}>
