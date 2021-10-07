@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, setState } from "react";
 import styles from "./Contactos.module.css";
 import Layout from "../../hoc/Layout/Layout";
 
@@ -10,6 +10,7 @@ import ContactosMap from "../../components/Contactos/ContactosMap/ContactosMap";
 
 class Contactos extends Component {
   constructor() {
+    super();
     this.state = { isLoading: true };
   }
 
