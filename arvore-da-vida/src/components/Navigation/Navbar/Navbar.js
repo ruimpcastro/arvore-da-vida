@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
+import { useSpring, animated } from "react-spring";
+
 import NavigationItem from "../NavigationItem/NavigationItem";
 import Logo from "../../../assets/Logo.jpg";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -60,8 +62,16 @@ const Navbar = () => {
     },
   ];
 
+  const animate = useSpring({
+    from: { opacity: 0, scale: 0.9 },
+    to: { opacity: 1, scale: 1 },
+    delay: 100,
+  });
+
+  const AnimatedBox = animated(Box);
+
   return (
-    <Box className={styles.box}>
+    <AnimatedBox style={animate} className={styles.box}>
       <AppBar
         position="static"
         sx={{
@@ -113,7 +123,7 @@ const Navbar = () => {
           </Box>
         </Toolbar>
       </AppBar>
-    </Box>
+    </AnimatedBox>
   );
 };
 

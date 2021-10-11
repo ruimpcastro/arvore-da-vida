@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navbar from "../../components/Navigation/Navbar/Navbar";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Spinner from "../../components/UI/Spinner/Spinner";
 
@@ -25,8 +24,7 @@ class Home extends Component {
         <Spinner />
       </div>
     ) : (
-      <div style={{ overflow: "hidden", height: "100vh" }}>
-        <Navbar />
+      <div style={{ overflow: "hidden", height: "89.5vh" }}>
         <Slideshow />
       </div>
     );

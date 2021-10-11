@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Layout from "../../hoc/Layout/Layout";
 import Servico from "../../components/Servicos/Servico/Servico";
 import Spinner from "../../components/UI/Spinner/Spinner";
 
@@ -8,6 +7,7 @@ import Box from "@mui/material/Box";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
+import Footer from "../../components/Footer/Footer";
 
 class Servicos extends Component {
   constructor() {
@@ -74,7 +74,7 @@ class Servicos extends Component {
         <Spinner />
       </div>
     ) : (
-      <Layout>
+      <Box>
         <Container>
           <Box mt={5} mb={5}>
             <Grid container spacing={2} style={{ display: "flex" }}>
@@ -93,7 +93,8 @@ class Servicos extends Component {
             </Grid>
           </Box>
         </Container>
-      </Layout>
+        <Footer />
+      </Box>
     );
   }
 }

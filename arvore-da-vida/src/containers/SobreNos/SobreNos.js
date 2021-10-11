@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Layout from "../../hoc/Layout/Layout";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
@@ -8,6 +7,7 @@ import { Container } from "@mui/material";
 import Content from "../../components/SobreNos/Content/Content";
 import Box from "@mui/material/Box";
 import Spinner from "../../components/UI/Spinner/Spinner";
+import Footer from "../../components/Footer/Footer";
 
 class SobreNos extends Component {
   constructor() {
@@ -67,25 +67,24 @@ class SobreNos extends Component {
         <Spinner />
       </div>
     ) : (
-      <Layout>
-        <Box mt={5}>
-          <Container>
-            {this.state.sobrenos.map((item, index) => {
-              return (
-                <Content
-                  key={index}
-                  layoutStyle={oddNumber(index)}
-                  image={item.image}
-                  alt={item.alt}
-                  title={item.title}
-                  body={item.body}
-                  delay={index}
-                />
-              );
-            })}
-          </Container>
-        </Box>
-      </Layout>
+      <Box mt={5}>
+        <Container>
+          {this.state.sobrenos.map((item, index) => {
+            return (
+              <Content
+                key={index}
+                layoutStyle={oddNumber(index)}
+                image={item.image}
+                alt={item.alt}
+                title={item.title}
+                body={item.body}
+                delay={index}
+              />
+            );
+          })}
+        </Container>
+        <Footer />
+      </Box>
     );
   }
 }
