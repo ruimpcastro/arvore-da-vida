@@ -4,10 +4,10 @@ import Spinner from "../../components/UI/Spinner/Spinner";
 
 import { Container, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
+import Layout from "../../hoc/Layout/Layout";
 
 import servico1 from "../../assets/services/servico1.jpg";
 import servico2 from "../../assets/services/servico2.jpg";
-import Footer from "../../components/Footer/Footer";
 
 class Servicos extends Component {
   constructor() {
@@ -74,27 +74,28 @@ class Servicos extends Component {
         <Spinner />
       </div>
     ) : (
-      <Box>
-        <Container>
-          <Box mt={5} mb={5}>
-            <Grid container spacing={2} style={{ display: "flex" }}>
-              {this.state.servicos.map((servico) => (
-                <Grid item xs={12} sm={6} key={servico.id} zeroMinWidth>
-                  <Servico
-                    image={servico.image}
-                    title={servico.title}
-                    contacto={servico.contacto}
-                    delay={servico.id}
-                  >
-                    {servico.description}
-                  </Servico>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
-        </Container>
-        <Footer />
-      </Box>
+      <Layout>
+        <Box>
+          <Container>
+            <Box mt={5} mb={5}>
+              <Grid container spacing={2} style={{ display: "flex" }}>
+                {this.state.servicos.map((servico) => (
+                  <Grid item xs={12} sm={6} key={servico.id} zeroMinWidth>
+                    <Servico
+                      image={servico.image}
+                      title={servico.title}
+                      contacto={servico.contacto}
+                      delay={servico.id}
+                    >
+                      {servico.description}
+                    </Servico>
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+          </Container>
+        </Box>
+      </Layout>
     );
   }
 }

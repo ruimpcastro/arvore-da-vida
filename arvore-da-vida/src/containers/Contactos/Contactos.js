@@ -8,7 +8,7 @@ import ContactosIntro from "../../components/Contactos/ContactosIntro/ContactosI
 import ContactosForm from "../../components/Contactos/ContactosForm/ContactosForm";
 import ContactosInfo from "../../components/Contactos/ContactosInfo/ContactosInfo";
 import ContactosMap from "../../components/Contactos/ContactosMap/ContactosMap";
-import Footer from "../../components/Footer/Footer";
+import Layout from "../../hoc/Layout/Layout";
 
 class Contactos extends Component {
   constructor() {
@@ -32,25 +32,26 @@ class Contactos extends Component {
         <Spinner />
       </div>
     ) : (
-      <Box mt={5}>
-        <Container className={styles.container}>
-          <Box className={styles.containerBox} mb={5}>
-            <Box className={styles.justifyText}>
-              <ContactosIntro textBox={styles.textBox} title={styles.title} />
+      <Layout>
+        <Box mt={5}>
+          <Container className={styles.container}>
+            <Box className={styles.containerBox} mb={5}>
+              <Box className={styles.justifyText}>
+                <ContactosIntro textBox={styles.textBox} title={styles.title} />
+              </Box>
+              <Box className={styles.contactBox}>
+                <ContactosInfo delay={2} />
+                <ContactosForm delay={3} />
+              </Box>
             </Box>
-            <Box className={styles.contactBox}>
-              <ContactosInfo delay={2} />
-              <ContactosForm delay={3} />
+          </Container>
+          <Container>
+            <Box mb={5}>
+              <ContactosMap delay={4} />
             </Box>
-          </Box>
-        </Container>
-        <Container>
-          <Box mb={5}>
-            <ContactosMap delay={4} />
-          </Box>
-        </Container>
-        <Footer />
-      </Box>
+          </Container>
+        </Box>
+      </Layout>
     );
   }
 }

@@ -11,9 +11,10 @@ const SlideshowItem = (props) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        background: props.image,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "100",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "100vh",
       }}
     >
       <img

@@ -7,7 +7,7 @@ import { Container } from "@mui/material";
 import Content from "../../components/SobreNos/Content/Content";
 import Box from "@mui/material/Box";
 import Spinner from "../../components/UI/Spinner/Spinner";
-import Footer from "../../components/Footer/Footer";
+import Layout from "../../hoc/Layout/Layout";
 
 class SobreNos extends Component {
   constructor() {
@@ -67,24 +67,25 @@ class SobreNos extends Component {
         <Spinner />
       </div>
     ) : (
-      <Box mt={5}>
-        <Container>
-          {this.state.sobrenos.map((item, index) => {
-            return (
-              <Content
-                key={index}
-                layoutStyle={oddNumber(index)}
-                image={item.image}
-                alt={item.alt}
-                title={item.title}
-                body={item.body}
-                delay={index}
-              />
-            );
-          })}
-        </Container>
-        <Footer />
-      </Box>
+      <Layout>
+        <Box mt={5}>
+          <Container>
+            {this.state.sobrenos.map((item, index) => {
+              return (
+                <Content
+                  key={index}
+                  layoutStyle={oddNumber(index)}
+                  image={item.image}
+                  alt={item.alt}
+                  title={item.title}
+                  body={item.body}
+                  delay={index}
+                />
+              );
+            })}
+          </Container>
+        </Box>
+      </Layout>
     );
   }
 }

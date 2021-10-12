@@ -10,6 +10,7 @@ import { Box } from "@mui/material";
 import produto1 from "../../assets/products/produto1.jpg";
 import produto2 from "../../assets/products/produto2.jpg";
 import produto3 from "../../assets/products/produto3.jpg";
+import produto4 from "../../assets/products/example.jpeg";
 
 const Slideshow = () => {
   const gallery = [
@@ -26,6 +27,11 @@ const Slideshow = () => {
     {
       name: "produto3",
       image: produto3,
+      description: "Lorem Ipsum Dolor",
+    },
+    {
+      name: "produto4",
+      image: produto4,
       description: "Lorem Ipsum Dolor",
     },
   ];

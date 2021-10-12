@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import Layout from "./hoc/Layout/Layout";
 
 // MATERIAL IMPORTS
 import { ThemeProvider } from "@mui/material/styles";
@@ -13,9 +12,7 @@ import { theme } from "./MaterialColorTheme/MaterialColorTheme";
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>
-      <Layout>
-        <App />
-      </Layout>
+      <App />
     </BrowserRouter>
   </ThemeProvider>,
   document.getElementById("root")

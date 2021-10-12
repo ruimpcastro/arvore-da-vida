@@ -71,7 +71,7 @@ const Navbar = () => {
   const AnimatedBox = animated(Box);
 
   return (
-    <AnimatedBox style={animate} className={styles.box}>
+    <Box className={styles.box}>
       <AppBar
         position="static"
         sx={{
@@ -123,7 +123,7 @@ const Navbar = () => {
           </Box>
         </Toolbar>
       </AppBar>
-    </AnimatedBox>
+    </Box>
   );
 };
 
