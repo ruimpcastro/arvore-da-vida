@@ -46,7 +46,7 @@ const Slideshow = () => {
 
   return (
     <AnimatedBox style={animate} className={styles.container}>
-      <Carousel animation="slide" interval="3000" indicators="false">
+      <Carousel animation="slide" indicators="false">
         {gallery.map((image, i) => (
           <SlideshowItem
             image={image.image}
