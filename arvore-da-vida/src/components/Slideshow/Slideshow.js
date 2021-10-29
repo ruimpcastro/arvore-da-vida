@@ -3,6 +3,7 @@ import styles from "./Slideshow.module.css";
 import { useSpring, animated } from "react-spring";
 import Carousel from "react-material-ui-carousel";
 import SlideshowItem from "./SlideshowItem/SlideshowItem";
+import { BrowserView, MobileView } from "react-device-detect";
 
 import { Box } from "@mui/material";
 
@@ -46,16 +47,35 @@ const Slideshow = () => {
 
   return (
     <AnimatedBox style={animate} className={styles.container}>
-      <Carousel animation="slide" indicators="false">
-        {gallery.map((image, i) => (
-          <SlideshowItem
-            image={image.image}
-            name={image.name}
-            description={image.description}
-            key={i}
-          />
-        ))}
-      </Carousel>
+      <BrowserView>
+        <Carousel indicators="false" stopAutoPlayOnHover={false}>
+          {gallery.map((image, i) => (
+            <SlideshowItem
+              image={image.image}
+              name={image.name}
+              description={image.description}
+              key={i}
+            />
+          ))}
+        </Carousel>
+      </BrowserView>
+      <MobileView>
+        <Carousel
+          animation="slide"
+          indicators="false"
+          stopAutoPlayOnHover={false}
+          indicators={false}
+        >
+          {gallery.map((image, i) => (
+            <SlideshowItem
+              image={image.image}
+              name={image.name}
+              description={image.description}
+              key={i}
+            />
+          ))}
+        </Carousel>
+      </MobileView>
     </AnimatedBox>
   );
 };
