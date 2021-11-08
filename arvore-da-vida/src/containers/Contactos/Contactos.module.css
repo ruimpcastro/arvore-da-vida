@@ -1,19 +1,41 @@
 @media only screen and (min-width: 1200px) {
   .containerBox {
     display: flex;
+    padding: 0 50px;
+    justify-content: space-around;
     flex-direction: row;
-    align-items: center;
+  }
+
+  .justifyText {
+    display: flex;
     justify-content: center;
-    align-content: center;
+    padding-top: 50px;
+  }
+
+  .title {
+    padding-bottom: 5px;
+    color: white;
   }
 
   .textBox {
-    width: 80%;
+    padding-bottom: 10px;
+    color: white;
   }
 
   .contactBox {
     display: flex;
     flex-direction: column;
+  }
+
+  .Linha {
+    border-bottom: 2px solid #e5e5e5;
+    width: 50%;
+  }
+
+  .company {
+    color: white;
+    text-align: center;
+    width: 80%;
   }
 }
 
@@ -22,7 +44,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
   }
+
+  .company {
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+
+  .LinhaStyle {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Linha {
+    display: none;
+  }
+
+  .textBox {
+    padding-bottom: 10px;
+  }
+
   .containerBox {
     justify-content: center;
     align-content: center;
@@ -36,13 +79,11 @@
 
   .title {
     text-align: center;
+    padding-bottom: 10px;
   }
 
   .contactBox {
     display: flex;
     flex-direction: column;
   }
-}
-
-@media only screen and (max-width: 800px) {
 }

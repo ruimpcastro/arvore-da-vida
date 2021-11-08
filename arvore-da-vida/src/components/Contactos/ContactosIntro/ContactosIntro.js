@@ -2,6 +2,7 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
+import styles from "../../../containers/Contactos/Contactos.module.css";
 
 const ContactosIntro = (props) => {
   const animate = useSpring({
@@ -14,7 +15,15 @@ const ContactosIntro = (props) => {
   return (
     <AnimatedBox style={animate} className={props.textBox}>
       <Typography variant="h2" className={props.title}>
-        Não tenha dúvidas. Entre em contacto connosco
+        Encontre-nos
+      </Typography>
+      <div className={styles.LinhaStyle}>
+        <div className={styles.Linha}></div>
+      </div>
+      <Typography variant="body1" style={{ marginTop: "10px" }}>
+        Entre em contacto connosco para saber mais informação sobre os nossos
+        serviços e produtos. <br />
+        Esclareça as suas dúvidas e promova a sua saúde.
       </Typography>
     </AnimatedBox>
   );
