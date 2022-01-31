@@ -34,7 +34,9 @@ const ContactosInfo = (props) => {
         )}
 
         <Box p={5} className={styles.contactBox}>
-          <Typography variant="h6">Entre em contacto connosco</Typography>
+          <Typography variant="h6" style={{ color: "white" }}>
+            Entre em contacto connosco
+          </Typography>
           <Box className={styles.contacts}>
             {info.telefone && (
               <a
@@ -44,7 +46,11 @@ const ContactosInfo = (props) => {
                 <Button variant="text">
                   <Typography
                     variant="body1"
-                    style={{ display: "flex", margin: "10px 5px 10px 5px" }}
+                    style={{
+                      display: "flex",
+                      margin: "10px 5px 10px 5px",
+                      color: "white",
+                    }}
                   >
                     <CallSharpIcon
                       style={{ marginRight: "5px" }}
@@ -64,7 +70,11 @@ const ContactosInfo = (props) => {
                 <Button variant="text">
                   <Typography
                     variant="body1"
-                    style={{ display: "flex", margin: "10px 5px 10px 5px" }}
+                    style={{
+                      display: "flex",
+                      margin: "10px 5px 10px 5px",
+                      color: "white",
+                    }}
                   >
                     <DialpadSharpIcon style={{ marginRight: "5px" }} />
                     {info.telemovel}
@@ -80,7 +90,11 @@ const ContactosInfo = (props) => {
                 <Button variant="text" style={{ textTransform: "none" }}>
                   <Typography
                     variant="body1"
-                    style={{ display: "flex", margin: "10px 5px 10px 5px" }}
+                    style={{
+                      display: "flex",
+                      margin: "10px 5px 10px 5px",
+                      color: "white",
+                    }}
                   >
                     <EmailSharpIcon style={{ marginRight: "5px" }} />{" "}
                     {info.mail}

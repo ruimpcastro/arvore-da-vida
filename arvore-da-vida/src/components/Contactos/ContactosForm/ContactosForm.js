@@ -43,7 +43,9 @@ const ContactosForm = (props) => {
 
   return (
     <AnimatedBox style={animate} p={5} className={styles.container}>
-      <Typography variant="h6">Ou envie-nos uma mensagem</Typography>
+      <Typography variant="h6" style={{ color: "white" }}>
+        Ou envie-nos uma mensagem
+      </Typography>
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <TextField
           required
@@ -54,6 +56,7 @@ const ContactosForm = (props) => {
           size="small"
           margin="normal"
           name="from_name"
+          style={{ color: "white" }}
         />
         <TextField
           required

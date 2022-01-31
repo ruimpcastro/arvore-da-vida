@@ -20,7 +20,7 @@ const ContactosIntro = (props) => {
       <div className={styles.LinhaStyle}>
         <div className={styles.Linha}></div>
       </div>
-      <Typography variant="body1" style={{ marginTop: "10px" }}>
+      <Typography variant="body1" style={{ marginTop: "10px", color: "white" }}>
         Entre em contacto connosco para saber mais informação sobre os nossos
         serviços e produtos. <br />
         Esclareça as suas dúvidas e promova a sua saúde.

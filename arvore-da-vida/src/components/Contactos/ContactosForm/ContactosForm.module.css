@@ -9,6 +9,7 @@
   .form {
     display: flex;
     flex-direction: column;
+    color: white;
   }
 
   .button {
@@ -30,5 +31,6 @@
   .form {
     display: flex;
     flex-direction: column;
+    color: white;
   }
 }
