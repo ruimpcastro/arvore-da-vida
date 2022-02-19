@@ -43,10 +43,11 @@ const Servico = (props) => {
         >
           <Button variant="text" size="small">
             <Typography className={styles.text}>
-              <CallSharpIcon className={styles.icons} /> Marque a sua consulta
+              <CallSharpIcon className={styles.icons} /> Marque a sua consulta (+351{props.contacto})
             </Typography>
           </Button>
         </a>
+        <p className={styles.text}></p>
       </CardActions>
     </AnimatedCard>
   );

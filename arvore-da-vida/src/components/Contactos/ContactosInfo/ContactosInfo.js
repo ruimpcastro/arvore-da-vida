@@ -10,7 +10,7 @@ import EmailSharpIcon from "@mui/icons-material/EmailSharp";
 
 const ContactosInfo = (props) => {
   const info = {
-    empresa: "Centro Holístico Árvore da Vida, Sociedade Unipessoal Lda.",
+    empresa: "Centro Holístico Árvore da Vida",
     telefone: "296285239",
     telemovel: false,
     mail: "infoarvoredavida@gmail.com",
