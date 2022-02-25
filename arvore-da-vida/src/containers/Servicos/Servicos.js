@@ -48,13 +48,6 @@ class Servicos extends Component {
           description:
             "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel e continua a dar consultas no nosso Centro.",
         },
-        {
-          id: 5,
-          image: servico1,
-          title: "Naturopatia",
-          contacto: "912345678",
-          description: "O Dr. Leonardo Pacheco",
-        },
       ],
     };
   }

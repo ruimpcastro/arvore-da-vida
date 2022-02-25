@@ -26,6 +26,7 @@ const Content = (props) => {
           />
           <Box ml={5} className={styles.textBox}>
             <Typography variant="h3">{props.title}</Typography>
+            <Typography variant="h4">{props.job}</Typography>
             <Typography variant="button">{props.cedula}</Typography>
             <Typography variant="body1">{props.body}</Typography>
           </Box>
@@ -46,6 +47,7 @@ const Content = (props) => {
             />
             <Box className={styles.textBox}>
               <Typography variant="h3">{props.title}</Typography>
+              <Typography variant="h4">{props.job}</Typography>
               <Typography variant="button">{props.cedula}</Typography>
               <Typography variant="body1">{props.body}</Typography>
             </Box>
