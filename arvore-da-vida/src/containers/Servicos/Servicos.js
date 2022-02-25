@@ -6,8 +6,10 @@ import { Container, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import Layout from "../../hoc/Layout/Layout";
 
-import servico1 from "../../assets/services/servico1.jpg";
-import servico2 from "../../assets/services/servico2.jpg";
+import servico1 from "../../assets/sobrenos/leonardoPacheco.jpg";
+import servico2 from "../../assets/sobrenos/marcioDomingues.jpg";
+import servico3 from "../../assets/sobrenos/patriciaSimas.jpg";
+import servico4 from "../../assets/sobrenos/shixongSun.jpg";
 
 class Servicos extends Component {
   constructor() {
@@ -32,7 +34,7 @@ class Servicos extends Component {
         },
         {
           id: 2,
-          image: servico1,
+          image: servico3,
           title: "Naturopatia",
           contacto: "912345678",
           description:
@@ -40,7 +42,7 @@ class Servicos extends Component {
         },
         {
           id: 4,
-          image: servico2,
+          image: servico4,
           title: "Naturopatia",
           contacto: "912345678",
           description:
