@@ -20,33 +20,33 @@ class Servicos extends Component {
         {
           id: 0,
           image: servico1,
-          title: "Naturopatia",
+          title: "Naturopatista / Homeopatista",
           contacto: "912345678",
           description:
-            "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel e continua a dar consultas no nosso Centro.",
+            "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel e continua a dar consultas no nosso centro em Ponta Delgada.",
         },
         {
           id: 1,
           image: servico2,
-          title: "Naturopatia",
+          title: "Osteopatista",
           contacto: "912345678",
-          description: "O Dr. Leonardo Pacheco",
+          description: "O Dr. Márcio Domingues encontra-se na Ilha de São Miguel e continua a dar consultas no nosso centro em Ponta Delgada.",
         },
         {
           id: 2,
           image: servico3,
-          title: "Naturopatia",
+          title: "Nutricionista",
           contacto: "912345678",
           description:
-            "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel.",
+            "A Dr. Patrícia Simas encontra-se na Ilha de São Miguel.",
         },
         {
           id: 4,
           image: servico4,
-          title: "Naturopatia",
+          title: "Acupunturista",
           contacto: "912345678",
           description:
-            "O Dr. Leonardo Pacheco encontra-se na Ilha de São Miguel e continua a dar consultas no nosso Centro.",
+          "O Dr. Shixong Sun encontra-se na Ilha de São Miguel e continua a dar consultas no nosso centro em Ponta Delgada.",
         },
       ],
     };

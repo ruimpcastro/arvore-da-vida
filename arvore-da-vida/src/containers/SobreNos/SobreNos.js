@@ -6,6 +6,10 @@ import servico2 from "../../assets/sobrenos/marcioDomingues.jpg";
 import servico3 from "../../assets/sobrenos/patriciaSimas.jpg";
 import servico4 from "../../assets/sobrenos/shixongSun.jpg";
 
+import fachada1 from "../../assets/sobrenos/fachada/fachada1.jpg";
+import fachada2 from "../../assets/sobrenos/fachada/fachada2.jpg";
+import fachada3 from "../../assets/sobrenos/fachada/fachada3.jpg";
+
 import { Container, Typography } from "@mui/material";
 import Content from "../../components/SobreNos/Content/Content";
 import Box from "@mui/material/Box";
@@ -75,6 +79,41 @@ class SobreNos extends Component {
           <Box ml={5}>
             <Container style={{ marginBottom: "20px" }}>
               <Typography variant="h3">Sobre Nós</Typography>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  marginBottom: "15px",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    marginBottom: "15px"
+                  }}
+                >
+                  <img
+                    src={fachada1}
+                    className={styles.image}
+                    alt="Fachada"
+                    style={{ height: "49%", width: "49%" }}
+                  />
+                  <img
+                    src={fachada2}
+                    className={styles.image}
+                    alt="Fachada"
+                    style={{ height: "49%", width: "49%" }}
+                  />
+                </div>
+                <img
+                  src={fachada3}
+                  className={styles.image}
+                  alt="Fachada"
+                  style={{ width: "100%" }}
+                />
+              </div>
               <Typography variant="body1">
                 O Centro Holístico Árvore da Vida, Sociedade Unipessoal Lda
                 nasceu na necessidade de promover a saúde e o bem-estar de forma
@@ -154,7 +193,6 @@ class SobreNos extends Component {
               </Typography>
             </Container>
           </Box>
-
           <Container>
             {this.state.sobrenos.map((item, index) => {
               return (
