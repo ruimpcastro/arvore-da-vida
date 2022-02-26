@@ -81,8 +81,19 @@ const Navbar = () => {
       >
         <Toolbar className={styles.toolbar}>
           <Box>
-            <Link to="/">
+            <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
               <img src={Logo} alt="Logo" className={styles.logo} />
+              <Typography variant="button">
+                <Button
+                  variant="link"
+                  style={{
+                    color: theme.palette.secondary.main,
+                    padding: "6px 16px",
+                  }}
+                >
+                  Arvore da Vida
+                </Button>
+              </Typography>
             </Link>
           </Box>
           <Box>
