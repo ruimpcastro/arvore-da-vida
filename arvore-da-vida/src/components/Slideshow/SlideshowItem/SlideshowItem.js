@@ -17,7 +17,7 @@ const SlideshowItem = (props) => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             width: "100%",
-            height: "100vh",
+            height: "90vh",
           }}
         >
           <img
@@ -53,7 +53,6 @@ const SlideshowItem = (props) => {
               maxWidth: "100%",
             }}
           />
-          <Typography variant="body1">{props.description}</Typography>
         </Paper>
       </MobileView>
     </div>
