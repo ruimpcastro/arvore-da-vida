@@ -10,6 +10,8 @@ import ContactosInfo from "../../components/Contactos/ContactosInfo/ContactosInf
 import ContactosMap from "../../components/Contactos/ContactosMap/ContactosMap";
 import Layout from "../../hoc/Layout/Layout";
 
+import fachada2 from "../../assets/sobrenos/fachada/fachada2.jpg";
+
 class Contactos extends Component {
   constructor() {
     super();
@@ -35,7 +37,16 @@ class Contactos extends Component {
       <Layout>
         <Box mt={5}>
           <Container className={styles.container}>
-            <Box className={styles.containerBox} mb={5}>
+            <Box
+              className={styles.containerBox}
+              mb={5}
+              style={{
+                backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url(" + fachada2 + ")",
+                borderRadius: "4px",
+                boxShadow:
+                  "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+              }}
+            >
               <Box className={styles.justifyText}>
                 <ContactosIntro textBox={styles.textBox} title={styles.title} />
               </Box>

@@ -26,9 +26,13 @@ const ContactosInfo = (props) => {
 
   return (
     <Box>
-      <AnimatedBox style={animate} mb={3} className={styles.container}>
+      <AnimatedBox style={animate} className={styles.container}>
         {info.empresa && (
-          <Typography variant="h5" gutterBottom style={{ fontWeight: "500" }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            style={{ fontWeight: "500" }}
+          >
             {info.empresa}
           </Typography>
         )}
