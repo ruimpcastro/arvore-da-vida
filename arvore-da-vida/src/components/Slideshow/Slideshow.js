@@ -8,32 +8,53 @@ import { BrowserView, MobileView } from "react-device-detect";
 import { Box } from "@mui/material";
 
 // IMAGE IMPORTS
-import produto1 from "../../assets/products/produto1.jpg";
-import produto2 from "../../assets/products/produto2.jpg";
-import produto3 from "../../assets/products/produto3.jpg";
-import produto4 from "../../assets/products/produto4.jpg";
+import slideshow1 from "../../assets/slideshow/slideshow1.jpg";
+import slideshow2 from "../../assets/slideshow/slideshow2.jpg";
+import slideshow3 from "../../assets/slideshow/slideshow3.jpg";
+import slideshow4 from "../../assets/slideshow/slideshow4.jpg";
+import slideshow5 from "../../assets/slideshow/slideshow5.jpg";
+import slideshow6 from "../../assets/slideshow/slideshow6.jpg";
+import slideshow7 from "../../assets/slideshow/slideshow7.jpg";
+import slideshow8 from "../../assets/slideshow/slideshow8.jpg";
+import slideshow9 from "../../assets/slideshow/slideshow9.jpg";
 
 const Slideshow = () => {
   const gallery = [
     {
-      name: "produto1",
-      image: produto1,
-      description: "Lorem",
+      name: "slideshow1",
+      image: slideshow1,
     },
     {
-      name: "produto2",
-      image: produto2,
-      description: "Lorem Ipsum",
+      name: "slideshow2",
+      image: slideshow2,
     },
     {
-      name: "produto3",
-      image: produto3,
-      description: "Lorem Ipsum Dolor",
+      name: "slideshow3",
+      image: slideshow3,
     },
     {
-      name: "produto4",
-      image: produto4,
-      description: "Lorem Ipsum Dolor",
+      name: "slideshow4",
+      image: slideshow4,
+    },
+    {
+      name: "slideshow5",
+      image: slideshow5,
+    },
+    {
+      name: "slideshow6",
+      image: slideshow6,
+    },
+    {
+      name: "slideshow7",
+      image: slideshow7,
+    },
+    {
+      name: "slideshow8",
+      image: slideshow8,
+    },
+    {
+      name: "slideshow9",
+      image: slideshow9,
     },
   ];
 
@@ -53,7 +74,6 @@ const Slideshow = () => {
             <SlideshowItem
               image={image.image}
               name={image.name}
-              description={image.description}
               key={i}
             />
           ))}
