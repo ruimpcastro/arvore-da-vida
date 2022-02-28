@@ -76,7 +76,7 @@ class SobreNos extends Component {
     ) : (
       <Layout>
         <Box mt={5}>
-          <Box ml={5}>
+          <Box>
             <Container style={{ marginBottom: "20px" }}>
               <Typography variant="h3">Sobre Nós</Typography>
               <div

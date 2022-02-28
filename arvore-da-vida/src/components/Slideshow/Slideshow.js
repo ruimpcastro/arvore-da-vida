@@ -18,15 +18,15 @@ import slideshow7 from "../../assets/slideshow/browser/slideshow7.jpg";
 import slideshow8 from "../../assets/slideshow/browser/slideshow8.jpg";
 import slideshow9 from "../../assets/slideshow/browser/slideshow9.jpg";
 
-import mobile1 from "../../assets/slideshow/mobile/slideshow1.jpg";
-import mobile2 from "../../assets/slideshow/mobile/slideshow2.jpg";
-import mobile3 from "../../assets/slideshow/mobile/slideshow3.jpg";
-import mobile4 from "../../assets/slideshow/mobile/slideshow4.jpg";
-import mobile5 from "../../assets/slideshow/mobile/slideshow5.jpg";
-import mobile6 from "../../assets/slideshow/mobile/slideshow6.jpg";
-import mobile7 from "../../assets/slideshow/mobile/slideshow7.jpg";
-import mobile8 from "../../assets/slideshow/mobile/slideshow8.jpg";
-import mobile9 from "../../assets/slideshow/mobile/slideshow9.jpg";
+import mobile1 from "../../assets/slideshow/mobile/mobile1.jpg";
+import mobile2 from "../../assets/slideshow/mobile/mobile2.jpg";
+import mobile3 from "../../assets/slideshow/mobile/mobile3.jpg";
+import mobile4 from "../../assets/slideshow/mobile/mobile4.jpg";
+import mobile5 from "../../assets/slideshow/mobile/mobile5.jpg";
+import mobile6 from "../../assets/slideshow/mobile/mobile6.jpg";
+import mobile7 from "../../assets/slideshow/mobile/mobile7.jpg";
+import mobile8 from "../../assets/slideshow/mobile/mobile8.jpg";
+import mobile9 from "../../assets/slideshow/mobile/mobile9.jpg";
 
 const Slideshow = () => {
   const gallery = [
