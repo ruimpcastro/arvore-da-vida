@@ -30,8 +30,14 @@ const Servico = (props) => {
         alt={props.title}
       />
       <CardContent>
+        <Typography variant="h4" gutterBottom>
+          {props.name}
+        </Typography>
         <Typography variant="h5" gutterBottom>
           {props.title}
+        </Typography>
+        <Typography variant="button" gutterBottom>
+          {props.cedula}
         </Typography>
         <Typography variant="body2">{props.children}</Typography>
       </CardContent>

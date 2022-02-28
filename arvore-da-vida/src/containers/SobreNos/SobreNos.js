@@ -6,12 +6,12 @@ import servico2 from "../../assets/sobrenos/marcioDomingues.jpg";
 import servico3 from "../../assets/sobrenos/patriciaSimas.jpg";
 import servico4 from "../../assets/sobrenos/shixongSun.jpg";
 
-import fachada1 from "../../assets/sobrenos/fachada/fachada1.jpg";
+//import fachada1 from "../../assets/sobrenos/fachada/fachada1.jpg";
 import fachada2 from "../../assets/sobrenos/fachada/fachada2.jpg";
-import fachada3 from "../../assets/sobrenos/fachada/fachada3.jpg";
+//import fachada3 from "../../assets/sobrenos/fachada/fachada3.jpg";
 
 import { Container, Typography } from "@mui/material";
-import Content from "../../components/SobreNos/Content/Content";
+//import Content from "../../components/SobreNos/Content/Content";
 import Box from "@mui/material/Box";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import Layout from "../../hoc/Layout/Layout";
@@ -41,7 +41,7 @@ class SobreNos extends Component {
         {
           image: servico4,
           alt: "Dr. Shixong Sun",
-          title: "Dr. Shixong Sun ",
+          title: "Dr. Shixong Sun",
           job: "Medicina Chinesa / Acupuntura",
           cedula: "0501025",
           body: "(ainda não temos qualquer tipo de informação)",
@@ -86,29 +86,8 @@ class SobreNos extends Component {
                   marginBottom: "15px",
                 }}
               >
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    marginBottom: "15px"
-                  }}
-                >
-                  <img
-                    src={fachada1}
-                    className={styles.image}
-                    alt="Fachada"
-                    style={{ height: "49%", width: "49%" }}
-                  />
-                  <img
-                    src={fachada2}
-                    className={styles.image}
-                    alt="Fachada"
-                    style={{ height: "49%", width: "49%" }}
-                  />
-                </div>
                 <img
-                  src={fachada3}
+                  src={fachada2}
                   className={styles.image}
                   alt="Fachada"
                   style={{ width: "100%" }}
@@ -151,10 +130,10 @@ class SobreNos extends Component {
               }}
             >
               <Typography variant="h3">Dr. Leonardo Pacheco</Typography>
-              <Typography variant="h4">Naturopata / Homeopata</Typography>
+              {/* <Typography variant="h4">Naturopata / Homeopata</Typography>
               <Typography variant="button">
                 Cédula RNP 2117 20 73. (A.P.E.N.B.) No2.315
-              </Typography>
+              </Typography> */}
               <img
                 src={servico1}
                 alt="Dr. Leonardo Pacheco"
@@ -193,7 +172,7 @@ class SobreNos extends Component {
               </Typography>
             </Container>
           </Box>
-          <Container>
+          {/* <Container>
             {this.state.sobrenos.map((item, index) => {
               return (
                 <Content
@@ -209,7 +188,7 @@ class SobreNos extends Component {
                 />
               );
             })}
-          </Container>
+          </Container> */}
         </Box>
       </Layout>
     );
